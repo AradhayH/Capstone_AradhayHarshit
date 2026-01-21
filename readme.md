@@ -42,6 +42,8 @@ install using "pip install -r requirements.txt"
 # Cleaned Data
 outputs/cleaned/yellow_tripdata_cleaned.csv
 
+---
+
 ## Performance benefits of Parquet
 To handle large-scale datasets (100GB+), this platform transitions from row-based formats (CSV) to Apache Parquet, a columnar storage format.
 1. Efficient Columnar Storage: Unlike CSVs, Parquet stores data column-wise. This allows the PySpark ETL to read only the specific columns required for KPI computation, significantly reducing Disk I/O and memory usage.
@@ -56,3 +58,4 @@ To handle large-scale datasets (100GB+), this platform transitions from row-base
 2. Processing (Spark/Databricks): Leverages distributed computing clusters to handle 100GB+ workloads. Spark’s DAG (Directed Acyclic Graph) optimizes transformations, ensuring efficient execution across multiple worker nodes.
 3. Indexing (Vector DB): Uses FAISS or Pinecone to index high-dimensional mobility patterns. This allows the system to perform fast similarity searches to find relevant historical context or anomalies.
 4. Retrieval (RAG): Implements Retrieval-Augmented Generation over aggregated mobility metrics. Instead of raw data, the LLM receives precisely retrieved "KPI context," ensuring accurate insights while staying within token limits.
+
