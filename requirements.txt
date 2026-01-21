@@ -1,0 +1,9 @@
+streamlit
+pandas
+plotly
+dotenv
+langchain
+matplotlib
+seaborn
+pyspark
+Sqlite3
