@@ -70,7 +70,8 @@ FROM trips
 """)
 
 # Writing to JSON 
-kpi_df.write.mode("overwrite").json("outputs/kpis")
+kpi_df.write.mode("overwrite").json("outputs/spark_sql_kpi_parquet")
 
 print("KPI export successful!")
+
 spark.stop()
